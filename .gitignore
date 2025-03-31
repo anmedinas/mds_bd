@@ -1,0 +1,11 @@
+# Omitir Data 
+data_raw/*
+
+# Omitir Reportes 
+reports/*
+
+# Omitir Querys
+query/*
+
+# Omitir Env
+env_bd_project/*
