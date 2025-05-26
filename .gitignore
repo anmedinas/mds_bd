@@ -4,8 +4,15 @@ data_raw/*
 # Omitir Reportes 
 reports/*
 
-# Omitir Querys
-query/*
+# Omitir Querys test 
+query_test/*
 
 # Omitir Env
 env_bd_project/*
+env_credit_databases/*
+
+# Omitir figs 
+figs/*
+
+# Omitir credenciales
+notebooks/config.py
