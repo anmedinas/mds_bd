@@ -1,6 +1,6 @@
 -- Crear la tabla credit_card_balance
 
-DROP TABLE IF EXISTS credit_card_balance;
+DROP TABLE IF EXISTS credit_card_balance; 
 
 CREATE TABLE credit_card_balance (
     SK_ID_PREV INT, -- ID único de la solicitud previa
@@ -27,3 +27,9 @@ CREATE TABLE credit_card_balance (
     SK_DPD INT, -- Días de retraso en el pago
     SK_DPD_DEF INT -- Días de retraso en el pago con incumplimiento
 );
+
+SET ROLE postgres;
+COPY credit_card_balance
+FROM '/tmp/credit_card_balance_bkp.csv'
+DELIMITER ','
+CSV HEADER ; 

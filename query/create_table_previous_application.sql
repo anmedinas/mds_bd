@@ -1,6 +1,5 @@
 -- Crear la tabla previous_application
-
-DROP TABLE IF EXISTS previous_application;
+DROP TABLE IF EXISTS previous_application ; 
 
 CREATE TABLE previous_application (
     SK_ID_PREV INT, -- ID único del crédito previo en Home Credit
@@ -41,3 +40,9 @@ CREATE TABLE previous_application (
     DAYS_TERMINATION INT, -- Días relativos a la terminación esperada
     NFLAG_INSURED_ON_APPROVAL INT CHECK (NFLAG_INSURED_ON_APPROVAL IN (0, 1)) -- Indicador de si se solicitó seguro
 );
+
+SET ROLE postgres;
+COPY previous_application
+FROM '/tmp/previous_application_bkp.csv'
+DELIMITER ','
+CSV HEADER ; 

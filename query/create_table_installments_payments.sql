@@ -1,6 +1,6 @@
 -- Crear la tabla installments_payments
 
-DROP TABLE IF EXISTS installments_payments;
+DROP TABLE IF EXISTS installments_payments ; 
 
 CREATE TABLE installments_payments (
     SK_ID_PREV INT, -- ID único del crédito previo en Home Credit
@@ -12,3 +12,9 @@ CREATE TABLE installments_payments (
     AMT_INSTALMENT DECIMAL(15, 2), -- Monto prescrito de la cuota
     AMT_PAYMENT DECIMAL(15, 2) -- Monto realmente pagado por el cliente
 );
+
+SET ROLE postgres;
+COPY installments_payments
+FROM '/tmp/installments_payments_bkp.csv'
+DELIMITER ','
+CSV HEADER ; 

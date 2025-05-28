@@ -14,5 +14,6 @@ env_credit_databases/*
 # Omitir figs 
 figs/*
 
-# Omitir credenciales
+# Omitir credenciales y notebooks en test
 notebooks/config.py
+notebooks_test

@@ -1,6 +1,5 @@
 -- Crear la tabla pos_cash_balance
-
-DROP TABLE IF EXISTS pos_cash_balance;
+DROP TABLE IF EXISTS pos_cash_balance; 
 
 CREATE TABLE pos_cash_balance (
     SK_ID_PREV INT, -- ID único del crédito previo en Home Credit
@@ -12,3 +11,9 @@ CREATE TABLE pos_cash_balance (
     SK_DPD INT, -- Días de retraso en el pago durante el mes
     SK_DPD_DEF INT -- Días de retraso en el pago con tolerancia durante el mes
 );
+
+SET ROLE postgres;
+COPY pos_cash_balance
+FROM '/tmp/pos_cash_balance_bkp.csv'
+DELIMITER ','
+CSV HEADER ; 
