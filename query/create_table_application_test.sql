@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS application_test; yayaayayay
+DROP TABLE IF EXISTS application_test;
 
 -- Crear la tabla application_test
 CREATE TABLE application_test (
@@ -123,6 +123,7 @@ CREATE TABLE application_test (
     AMT_REQ_CREDIT_BUREAU_MON DECIMAL(15, 2), -- Consultas al buró de crédito un mes antes de la solicitud
     AMT_REQ_CREDIT_BUREAU_QRT DECIMAL(15, 2), -- Consultas al buró de crédito tres meses antes de la solicitud
     AMT_REQ_CREDIT_BUREAU_YEAR DECIMAL(15, 2) -- Consultas al buró de crédito un año antes de la solicitud
+    CONSTRAINT sk_id_curr PRIMARY KEY (sk_id_curr)
 );
 
 SET ROLE postgres;
