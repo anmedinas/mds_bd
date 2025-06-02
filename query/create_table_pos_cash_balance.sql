@@ -10,6 +10,8 @@ CREATE TABLE pos_cash_balance (
     NAME_CONTRACT_STATUS VARCHAR(50), -- Estado del contrato durante el mes (por ejemplo, 'Active', 'Completed')
     SK_DPD INT, -- Días de retraso en el pago durante el mes
     SK_DPD_DEF INT -- Días de retraso en el pago con tolerancia durante el mes
+    CONSTRAINT pk_pc_balance PRIMARY KEY (sk_id_prev, sk_id_curr, months_balance)
+
 );
 
 SET ROLE postgres;
