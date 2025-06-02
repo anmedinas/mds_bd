@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS application_test;
+DROP TABLE IF EXISTS application_test; yayaayayay
 
 -- Crear la tabla application_test
 CREATE TABLE application_test (
