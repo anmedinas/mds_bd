@@ -20,6 +20,8 @@ CREATE TABLE bureau (
     CREDIT_TYPE VARCHAR(50), -- Tipo de crédito en el Bureau (por ejemplo, 'Car', 'Cash', etc.)
     DAYS_CREDIT_UPDATE INT, -- Días antes de la solicitud en que se actualizó la última información sobre el crédito del Bureau
     AMT_ANNUITY DECIMAL(15, 2) -- Anualidad del crédito en el Bureau
+    CONSTRAINT pk_bureau PRIMARY KEY (sk_id_curr, sk_bureau_id)
+
 );
 
 SET ROLE postgres;
