@@ -39,6 +39,10 @@ CREATE TABLE previous_application (
     DAYS_LAST_DUE INT, -- Días relativos al último vencimiento
     DAYS_TERMINATION INT, -- Días relativos a la terminación esperada
     NFLAG_INSURED_ON_APPROVAL INT CHECK (NFLAG_INSURED_ON_APPROVAL IN (0, 1)) -- Indicador de si se solicitó seguro
+    CONSTRAINT pk_previous_application PRIMARY KEY (sk_id_prev, sk_id_curr),
+    CONSTRAINT previous_application_flag_last_appl_per_contract_check CHECK (flag_last_appl_per_contract = ANY (ARRAY['Y'::bpchar, 'N'::bpchar])),
+    CONSTRAINT previous_application_nflag_last_appl_in_day_check CHECK (nflag_last_appl_in_day = ANY (ARRAY[0, 1])),
+    CONSTRAINT previous_application_nflag_insured_on_approval_check CHECK (nflag_insured_on_approval = ANY (ARRAY[0::double precision, 1::double precision]))
 );
 
 SET ROLE postgres;
