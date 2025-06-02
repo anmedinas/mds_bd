@@ -11,6 +11,8 @@ CREATE TABLE installments_payments (
     DAYS_ENTRY_PAYMENT INT, -- Días en los que se pagó realmente la cuota (relativo a la fecha de la solicitud actual)
     AMT_INSTALMENT DECIMAL(15, 2), -- Monto prescrito de la cuota
     AMT_PAYMENT DECIMAL(15, 2) -- Monto realmente pagado por el cliente
+    id integer NOT NULL DEFAULT nextval('proyecto.installments_payments_id_seq'::regclass),
+    CONSTRAINT installments_payments_pkey PRIMARY KEY (id) -- llave artificial pq no habia combinacion unica de atributos sin tener que considerarlos todos como llave
 );
 
 SET ROLE postgres;
