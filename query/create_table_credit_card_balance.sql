@@ -25,7 +25,8 @@ CREATE TABLE credit_card_balance (
     CNT_INSTALMENT_MATURE_CUM INT, -- Número acumulado de cuotas vencidas
     NAME_CONTRACT_STATUS VARCHAR(50), -- Estado del contrato (por ejemplo, 'Active', 'Completed')
     SK_DPD INT, -- Días de retraso en el pago
-    SK_DPD_DEF INT -- Días de retraso en el pago con incumplimiento
+    SK_DPD_DEF INT, -- Días de retraso en el pago con incumplimiento
+    CONSTRAINT pk_cc_balance PRIMARY KEY (SK_ID_PREV, SK_ID_CURR, MONTHS_BALANCE)
 );
 
 SET ROLE postgres;

@@ -19,7 +19,8 @@ CREATE TABLE bureau (
     AMT_CREDIT_SUM_OVERDUE DECIMAL(15, 2), -- Monto actual vencido en el crédito del Bureau
     CREDIT_TYPE VARCHAR(50), -- Tipo de crédito en el Bureau (por ejemplo, 'Car', 'Cash', etc.)
     DAYS_CREDIT_UPDATE INT, -- Días antes de la solicitud en que se actualizó la última información sobre el crédito del Bureau
-    AMT_ANNUITY DECIMAL(15, 2) -- Anualidad del crédito en el Bureau
+    AMT_ANNUITY DECIMAL(15, 2), -- Anualidad del crédito en el Bureau
+    CONSTRAINT pk_bureau PRIMARY KEY (SK_ID_CURR, SK_BUREAU_ID)
 );
 
 SET ROLE postgres;

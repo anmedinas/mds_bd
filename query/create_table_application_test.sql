@@ -122,7 +122,8 @@ CREATE TABLE application_test (
     AMT_REQ_CREDIT_BUREAU_WEEK DECIMAL(15, 2), -- Consultas al buró de crédito una semana antes de la solicitud
     AMT_REQ_CREDIT_BUREAU_MON DECIMAL(15, 2), -- Consultas al buró de crédito un mes antes de la solicitud
     AMT_REQ_CREDIT_BUREAU_QRT DECIMAL(15, 2), -- Consultas al buró de crédito tres meses antes de la solicitud
-    AMT_REQ_CREDIT_BUREAU_YEAR DECIMAL(15, 2) -- Consultas al buró de crédito un año antes de la solicitud
+    AMT_REQ_CREDIT_BUREAU_YEAR DECIMAL(15, 2), -- Consultas al buró de crédito un año antes de la solicitud
+    CONSTRAINT SK_ID_CURR PRIMARY KEY (SK_ID_CURR)
 );
 
 SET ROLE postgres;

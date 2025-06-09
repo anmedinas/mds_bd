@@ -38,7 +38,8 @@ CREATE TABLE previous_application (
     DAYS_LAST_DUE_1ST_VERSION INT, -- Días relativos al primer vencimiento en la primera versión
     DAYS_LAST_DUE INT, -- Días relativos al último vencimiento
     DAYS_TERMINATION INT, -- Días relativos a la terminación esperada
-    NFLAG_INSURED_ON_APPROVAL INT CHECK (NFLAG_INSURED_ON_APPROVAL IN (0, 1)) -- Indicador de si se solicitó seguro
+    NFLAG_INSURED_ON_APPROVAL INT CHECK (NFLAG_INSURED_ON_APPROVAL IN (0, 1)), -- Indicador de si se solicitó seguro
+    CONSTRAINT pk_previous_application PRIMARY KEY (SK_ID_PREV, SK_ID_CURR)
 );
 
 SET ROLE postgres;
