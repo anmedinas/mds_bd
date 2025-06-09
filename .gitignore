@@ -16,4 +16,5 @@ figs/*
 
 # Omitir credenciales y notebooks en test
 notebooks/config.py
+notebooks/*.html
 notebooks_test
