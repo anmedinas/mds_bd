@@ -2,7 +2,7 @@
 
 DROP TABLE IF EXISTS credit_card_balance; 
 
-CREATE TABLE IF NOT EXISTS proyecto.credit_card_balance
+CREATE TABLE IF NOT EXISTS credit_card_balance
 (
     sk_id_prev integer NOT NULL,
     sk_id_curr integer NOT NULL,
