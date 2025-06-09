@@ -2,7 +2,7 @@
 
 DROP TABLE IF EXISTS installments_payments ; 
 
-CREATE TABLE IF NOT EXISTS proyecto.installments_payments
+CREATE TABLE IF NOT EXISTS installments_payments
 (
     sk_id_prev integer,
     sk_id_curr integer,
