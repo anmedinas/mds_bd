@@ -11,9 +11,6 @@ query_test/*
 env_bd_project/*
 env_credit_databases/*
 
-# Omitir figs 
-figs/*
-
 # Omitir credenciales y notebooks en test
 notebooks/config.py
 notebooks/*.html
